@@ -1,0 +1,43 @@
+{{> header}}
+
+<main>
+    <section id="weather">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="list-group">
+                        <a class="list-group-item" href="/weather/Kyiv">Kyiv</a>
+                        <a class="list-group-item" href="/weather/Sumy">Sumy</a>
+                        <a class="list-group-item" href="/weather/Zhytomyr">Zhytomyr</a>
+                        <a class="list-group-item" href="/weather/Poltava">Poltava</a>
+                    </div>
+                </div>
+                <div class="mw-80 mh-1000 col-12 col-md-6 col-lg-9 border" style="width: max-content;">
+                    <h1>Weather in the city {{city}}</h1>
+                    <img src="https://openweathermap.org/img/wn/{{weather.weather.0.icon}}@2x.png"
+                         alt="Зображення погоди">
+
+                    <div class="container text-center">
+                        <div class="row align-items-start ">
+                            <div class="col col-md-6  border p-3">Тиск</div>
+                            <div class="col-6 col-md-4 border p-3"> {{weather.main.pressure}}</div>
+
+                            <div class="w-100"></div>
+
+                            <div class="col-6 col-md-6 border p-3">Вологість</div>
+                            <div class="col-6 col-md-4 border p-3">{{weather.main.humidity}}</div>
+
+                            <div class="w-100"></div>
+
+                            <div class="col-6 col-md-6 border p-3">Температура</div>
+                            <div class="col-6 col-md-4 border p-3">{{weather.main.temp}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+{{> footer}}
